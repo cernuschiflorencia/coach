@@ -1,0 +1,112 @@
+
+  .container-aboutus{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-about-us{
+    width: 200px;
+    margin: 10px;
+    transition: all 300ms;
+  }
+
+  .card-about-us:hover{
+    width: 350px;
+  }
+
+  .card-about-us .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  
+
+  }
+  
+  .card-about-us .cover .imagen-aboutus{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+  }  
+
+  .card-about-us:hover .cover .imagen-aboutus{
+    top: 0px;
+    filter: none;
+  }
+
+  .card-about-us .image-back-aboutus{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+  }
+
+  .card-about-us .description{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300m;
+    cursor: pointer;
+  }
+
+  .card-about-us:hover .description{
+    padding: 40px;
+  }
+
+  .card-about-us .description h2{
+    margin-top: 10px;
+
+  }
+
+  .card-about-us .description p{
+    margin-top: 10px;
+  }
+
+  .description{
+    padding-top: 10px;
+  }
+
+  .card:hover{
+    box-shadow: 0 3px 30px grey;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 720px) {
+    /* For a screen < 720px, this CSS will be read */
+    .description {
+      padding: 30px;
+      max-width: 100%; 
+      height: auto;
+    }
+    .container{
+      padding: 30px;
+      max-width: 100%; 
+      height: auto;
+    }
+  }
+  @media (max-width: 540px) {
+    /* For a screen < 540px, this CSS will be read */
+    .description {
+      padding: 30px;
+      max-width: 100%; 
+      height: auto;
+    }
+    .container{
+      padding: 30px;
+      max-width: 100%; 
+      height: auto;
+    }
+  }
