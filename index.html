@@ -378,6 +378,91 @@
             margin-bottom: 2rem;
         }
 
+        /* Client Types Section */
+        .client-types-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .client-types-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .client-type-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .client-type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .client-type-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .client-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: #667eea;
+            background: white;
+        }
+
+        .client-icon {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .client-content {
+            flex: 1;
+        }
+
+        .client-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .client-content p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .client-content strong {
+            color: #667eea;
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 5rem 2rem;
@@ -539,8 +624,22 @@
                 gap: 2rem;
             }
 
-            .about-section, .services-section, .pricing-section, .cta-section {
+            .about-section, .services-section, .pricing-section, .client-types-section, .cta-section {
                 padding: 3rem 1rem;
+            }
+
+            .client-type-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .client-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+                margin: 0 auto;
             }
 
             .container {
@@ -660,6 +759,21 @@
                 padding: 2rem 1.5rem;
             }
 
+            .client-type-card {
+                margin: 0 0.5rem;
+                padding: 2rem 1.5rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .client-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                margin: 0 auto;
+            }
+
             .profile-card {
                 margin: 0 0.5rem;
                 padding: 1.5rem;
@@ -720,6 +834,21 @@
             .service-card, .pricing-card {
                 margin: 0 0.25rem;
                 padding: 1.5rem 1rem;
+            }
+
+            .client-type-card {
+                margin: 0 0.25rem;
+                padding: 1.5rem 1rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .client-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                margin: 0 auto;
             }
 
             .profile-card {
@@ -886,6 +1015,47 @@
         </div>
     </section>
 
+    <!-- Client Types Section -->
+    <section class="client-types-section">
+        <div class="container">
+            <h2 class="section-title">¿Con Quién Trabajo?</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Cada persona tiene desafíos únicos. Mi enfoque se adapta a diferentes perfiles para lograr resultados específicos.
+            </p>
+            <div class="client-types-grid">
+                <div class="client-type-card">
+                    <div class="client-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="client-content">
+                        <h3>Empresarios</h3>
+                        <p>Que quieren empezar una nueva etapa en su carrera o negocio, gestionando de manera más efectiva y vital todo su conocimiento y experiencia. <strong>Aprende a disfrutar el proceso transformacional en armonía con tu ecosistema actual.</strong></p>
+                    </div>
+                </div>
+
+                <div class="client-type-card">
+                    <div class="client-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="client-content">
+                        <h3>Viajeros</h3>
+                        <p>Aprende a despojarte de juicios y atrévete a romper paradigmas, redescubre tus herramientas y aprende a utilizarlas para convertirte en viajero de tiempo completo. <strong>Te acompañaré en el proceso para que dejes de soñar con hacerlo y lo conviertas en un plan listo para ejecutar.</strong></p>
+                    </div>
+                </div>
+
+                <div class="client-type-card">
+                    <div class="client-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="client-content">
+                        <h3>Estudiantes</h3>
+                        <p>Aprende a visualizarte y concentrarte en lo que te apasiona, transita el proceso de aprendizaje adquiriendo metodologías que te ayudarán también en el ámbito laboral. <strong>Aprende a gestionar emociones y planifica tu próximo paso al éxito.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -895,7 +1065,7 @@
                 <br><em>- Heather Schuck</em>
             </p>
             <div class="cta-buttons">
-                <a href="https://wa.me/5491153842626?text=Hola%20Florencia,%20me%20interesa%20conocer%20más%20sobre%20tus%20sesiones%20de%20coaching" class="btn btn-secondary" target="_blank">
+                <a href="https://wa.me/591153842626?text=Hola%20Florencia,%20me%20interesa%20conocer%20más%20sobre%20tus%20sesiones%20de%20coaching" class="btn btn-secondary" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     Escribirme por WhatsApp
                 </a>
@@ -966,8 +1136,3 @@
         document.querySelectorAll('.service-card, .pricing-card, .about-content, .profile-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
