@@ -1,0 +1,11 @@
+.DS_Store
+
+# Fotos originales: son la fuente de los derivados que sirve la página, pero
+# pesan ~14MB y nadie las descarga. Los derivados (assets/hero-*, assets/esp-*)
+# sí se versionan, y assets/README.md documenta el script que los regenera.
+new_version/assets/banner_test.jpg
+new_version/assets/coaching_ejectuvo_vitaly-gariev-unsplash.jpg
+new_version/assets/emprendedor_vitaly-gariev_unsplash.jpg
+new_version/assets/finanzas_kelly-sikkema_unsplash.jpg
+new_version/assets/liderazg0_csaba-veres_unsplash.jpg
+new_version/assets/vocaciona_jason-hogan_unsplash.jpg
