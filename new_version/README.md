@@ -35,8 +35,10 @@ formación, testimonios, CTA final, newsletter y footer.
 
 ## Pendiente antes de publicar
 
-1. **Email real** — reemplazar `REEMPLAZAR_EMAIL` (aparece en el CTA final y dos
-   veces en el footer). Si se usa WhatsApp o un link de agenda, sumarlo ahí.
+1. ~~Email real~~ — **hecho**. Los CTA de "Agendar una sesión" van a WhatsApp
+   (+54 9 11 5384-2626) con un mensaje ya escrito. El link aparece seis veces:
+   header, hero, CTA final, botón del footer, número del footer e ícono social.
+   Si cambia el número o el texto del mensaje, hay que actualizarlo en los seis.
 2. **Fotografías** — ver `assets/README.md`. El hero, "Sobre mí" y las 5 cards de
    especialidades ya tienen foto real. Quedan los avatares de testimonios y la
    imagen de Open Graph. Los originales suman 14MB en `assets/` y la página no los
@@ -70,6 +72,9 @@ formación, testimonios, CTA final, newsletter y footer.
   especialidades. Si se quiere el otro bloque también, se agrega.
 - **"Recursos" en el menú** apunta a la banda de newsletter, porque todavía no
   existe la página de recursos ni el blog.
+- **No hay email de contacto.** Toda la conversión pasa por WhatsApp. Si además
+  se quiere una dirección de correo, hay que sumarla al footer y al `contactPoint`
+  del JSON-LD.
 - **Redes en el footer:** sólo LinkedIn y correo. El Documento Maestro §18 y §19
   pide enlazar únicamente perfiles oficiales verificados, así que no se sumaron
   Instagram ni YouTube aunque aparezcan en el mockup.
