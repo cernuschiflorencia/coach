@@ -47,45 +47,40 @@ formación, testimonios, CTA final, newsletter y footer.
 - El newsletter guarda cada alta en `contactos.txt` dentro de la carpeta
   CONTACTOS COACH del Drive, vía un Apps Script. Ver `_internos/apps-script/README.md`.
 
-## Pendiente antes de publicar
+## Estado
 
-1. ~~Email real~~ — **hecho**. Los CTA de "Agendar una sesión" van a WhatsApp
-   (+54 9 11 5384-2626) con un mensaje ya escrito. El link aparece seis veces:
-   header, hero, CTA final, botón del footer, número del footer e ícono social.
-   Si cambia el número o el texto del mensaje, hay que actualizarlo en los seis.
-2. **Fotografías** — ver `assets/README.md`. El hero, "Sobre mí" y las 5 cards de
-   especialidades ya tienen foto real. Quedan los avatares de testimonios y la
-   imagen de Open Graph. Los originales suman 14MB en `assets/` y la página no los
-   sirve: conviene sacarlos del repo o gitignorearlos.
-3. **Logotipo de ICF** — el hero muestra un lockup tipográfico provisorio.
-4. **Denominación de la formación** — validar contra los certificados antes de
-   publicar la referencia a ICF y al programa ACTP (Documento Maestro §12).
-   Recordar que no se usa la sigla MCC.
-5. **Textos de los testimonios** — los testimonios ya están firmados por Claudia,
-   Carlos y Romina, pero **las tres frases siguen siendo las de ejemplo que se
-   escribieron al armar la maqueta**. Hay que reemplazarlas por lo que dijeron
-   realmente. Publicar un texto inventado con el nombre de una persona real es
-   atribuirle algo que no dijo, así que esto es bloqueante.
-6. ~~Newsletter~~ — **hecho**. El Apps Script está publicado y la URL cargada en
-   `NEWSLETTER_ENDPOINT`. Cada alta se guarda en `contactos.txt`, en la carpeta
-   CONTACTOS COACH del Drive de gise.ares@gmail.com, compartida con Flor. Detalle
-   en `_internos/apps-script/README.md`.
-7. **Páginas internas** — las 12 URLs del Documento Maestro. Las cards de
-   especialidades ya tienen comentado el `href` definitivo de cada una.
-8. ~~Páginas legales~~ — **hecho**. `politica-de-privacidad.html` y
-   `terminos-y-condiciones.html` están escritas, enlazadas desde el footer y con
-   los datos de la responsable cargados. Queda una sola cosa: **que un abogado
-   revise ambos textos**. Son una base razonable que cubre la Ley 25.326, no un
-   documento validado profesionalmente, y si llegan visitas desde Europa entra
-   además el GDPR.
-9. **Open Graph** — falta `og-cover.jpg` de 1200x630; el meta está comentado.
-10. **Search Console** — falta conectar el sitio y registrar el sitemap, que ya
-    está en `sitemap.xml` con las tres URLs actuales. Al sumar las páginas
-    internas hay que agregarlas ahí.
-    **No sirve poner un `robots.txt`** en este repositorio: los rastreadores sólo
-    lo leen en la raíz del dominio (`cernuschiflorencia.github.io/robots.txt`), y
-    acá sólo controlamos `/coach/`. Por eso el sitemap se registra a mano en
-    Search Console.
+**El sitio está publicado** en https://cernuschiflorencia.github.io/coach/ desde el
+17 de agosto de 2026. Pages sirve desde la raíz de `main`, así que todo lo que se
+commitea a `main` sale en vivo en aproximadamente un minuto: no hay entorno de
+prueba intermedio.
+
+Resueltos: contacto por WhatsApp, fotos del hero, "Sobre mí" y las cinco
+especialidades, newsletter guardando en Drive, páginas legales con los datos de la
+responsable, sitemap, y verificación en Google Search Console y Bing.
+
+## Pendiente
+
+1. **Textos de los testimonios** — están firmados por Claudia, Carlos y Romina,
+   pero **las tres frases siguen siendo las de ejemplo que se escribieron al armar
+   la maqueta**, y ya están publicadas. Reemplazarlas por lo que dijeron realmente
+   es lo primero de esta lista: son palabras atribuidas a personas reales.
+2. **Revisión legal** — un abogado tendría que leer `politica-de-privacidad.html` y
+   `terminos-y-condiciones.html`. Son una base razonable que cubre la Ley 25.326,
+   no un documento validado profesionalmente, y si llegan visitas desde Europa
+   entra además el GDPR.
+3. **Denominación de la formación** — validar contra los certificados la referencia
+   a ICF y al programa ACTP (Documento Maestro §12). No se usa la sigla MCC.
+4. **Logotipo de ICF** — el hero muestra un lockup tipográfico provisorio.
+5. **Fotografías que faltan** — avatares de los testimonios e imagen de Open Graph
+   (`og-cover.jpg`, 1200x630; el meta está comentado en el `<head>`). Ver
+   `assets/README.md`.
+6. **Páginas internas** — las 12 URLs del Documento Maestro. Las cards de
+   especialidades ya tienen comentado el `href` definitivo de cada una. Al crearlas
+   hay que sumarlas a `sitemap.xml`.
+7. **Sitemap en Google** — enviado y verificado, pero al 17/08 figuraba como "no se
+   ha podido obtener", que es la cola de Google. Bing ya lo procesó correctamente.
+   **No agregar un `robots.txt`**: los rastreadores sólo lo leen en la raíz del
+   dominio, y acá el sitio vive en `/coach/`.
 
 ## Decisiones que conviene revisar
 
