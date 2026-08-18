@@ -56,17 +56,19 @@ formación, testimonios, CTA final, newsletter y footer.
    escribieron al armar la maqueta**. Hay que reemplazarlas por lo que dijeron
    realmente. Publicar un texto inventado con el nombre de una persona real es
    atribuirle algo que no dijo, así que esto es bloqueante.
-6. **Newsletter** — el formulario ya está programado y guarda en Drive, pero
-   falta publicar el Apps Script y pegar su URL en `NEWSLETTER_ENDPOINT`, arriba
-   de `script.js`. Paso a paso en `apps-script/README.md`. Mientras la constante
-   esté vacía, el formulario valida y muestra el cartel de gracias pero **no
-   guarda nada**, y lo avisa por consola.
+6. ~~Newsletter~~ — **hecho**. El Apps Script está publicado y la URL cargada en
+   `NEWSLETTER_ENDPOINT`. Cada alta se guarda en `contactos.txt`, en la carpeta
+   CONTACTOS COACH del Drive de gise.ares@gmail.com, compartida con Flor. Detalle
+   en `apps-script/README.md`.
 7. **Páginas internas** — las 12 URLs del Documento Maestro. Las cards de
    especialidades ya tienen comentado el `href` definitivo de cada una.
-8. **Política de privacidad y términos** — los dos links del footer están vacíos.
-   Ahora es bloqueante: desde que el newsletter guarda emails se están tratando
-   datos personales (Ley 25.326 en Argentina, GDPR si hay visitas de Europa). El
-   formulario ya muestra la microcopia que anticipa el uso de los datos.
+8. **Datos legales de las dos páginas nuevas** — `politica-de-privacidad.html` y
+   `terminos-y-condiciones.html` ya existen y están enlazadas desde el footer,
+   pero tienen cuatro huecos marcados en amarillo con `[COMPLETAR: ...]`: nombre
+   legal y CUIT/DNI, domicilio, email de contacto y jurisdicción. Se ven bien
+   visibles a propósito, para que no pasen desapercibidos si la página se publica
+   sin llenarlos. Conviene además que un abogado revise ambos textos: son una
+   base razonable, no un documento validado profesionalmente.
 9. **Open Graph** — falta `og-cover.jpg` de 1200x630; el meta está comentado.
 10. **Sitemap, robots y Search Console** — cuando exista la estructura de URLs.
 

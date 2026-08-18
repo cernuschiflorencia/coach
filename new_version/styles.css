@@ -339,6 +339,32 @@ a{color:inherit;text-decoration:none}
 .dialogo h2{font-size:1.6rem;margin-bottom:12px}
 .dialogo p{font-size:.9rem;color:#5c6360;margin-bottom:26px}
 
+/* ---------- Páginas legales ---------- */
+.legal-page{padding:72px 0 96px;background:var(--paper)}
+.legal-wrap{max-width:780px}
+.legal-wrap h1{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:10px}
+.legal-fecha{font-size:.78rem;color:var(--muted);margin-bottom:34px}
+.legal-intro{font-size:1.05rem;color:#4e5551;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.legal-wrap h2{font-size:1.25rem;margin:42px 0 14px}
+.legal-wrap p,.legal-wrap li{font-size:.94rem;color:#414744}
+.legal-wrap ul{padding-left:22px;margin:0 0 18px}
+.legal-wrap li{margin-bottom:9px}
+.legal-wrap a:not(.btn){color:var(--tan);border-bottom:1px solid currentColor}
+.legal-wrap a:not(.btn):hover{color:var(--navy)}
+/* Nota al pie de una cláusula: texto legal citado, se baja de jerarquía. */
+.legal-nota{
+  font-size:.82rem !important;color:#5c6360 !important;
+  border-left:2px solid var(--line);padding-left:16px;
+}
+/* Dato que falta completar. Va bien visible a propósito: si la página se
+   publica sin llenarlo, tiene que saltar a la vista. */
+.pendiente{
+  background:#ffe9c7;color:#7a4a08;padding:1px 6px;border-radius:3px;
+  font-size:.86em;font-weight:600;
+}
+.legal-volver{margin-top:52px;padding-top:26px;border-top:1px solid var(--line)}
+.footer-bottom [aria-current="page"]{color:#fff}
+
 /* ---------- Footer ---------- */
 .footer{background:var(--navy);color:#e7eeeb;padding:66px 0 22px}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr 1fr;gap:44px}

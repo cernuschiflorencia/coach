@@ -98,7 +98,7 @@ if (track && dotsBox) {
    Drive de Florencia. Ver apps-script/README.md para publicarlo y pegar la URL
    acá abajo. Con la constante vacía el formulario funciona igual, pero no
    guarda nada: sirve para probar la interfaz sin fingir que se registró.      */
-const NEWSLETTER_ENDPOINT = '';
+const NEWSLETTER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz_m8bD7RAY8jac5W-eTcIlF-dnXntNVVDlAOEylefUMx9n2Se8FB1LJ-bG6aaKR-4-dA/exec';
 
 /* Sólo Móvil/Escritorio y el sistema operativo si el navegador lo informa.
    A propósito es un dato grueso: no identifica a nadie. */
