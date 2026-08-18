@@ -13,6 +13,19 @@ Formulario (navegador)  ──POST JSON──▶  Apps Script  ──▶  contac
                         ◀──{ ok }─────
 ```
 
+## Desde qué cuenta
+
+**El script se publica desde `gise.ares@gmail.com`**, que es la cuenta dueña de
+la carpeta y del archivo. El script corre con la identidad de quien lo publica,
+así que tiene que ser una cuenta con permiso de escritura sobre `contactos.txt`.
+
+Que el repositorio de GitHub esté en la cuenta de Flor no influye: el Apps Script
+es un endpoint público independiente. La página le pega por HTTP y no sabe ni le
+importa de qué cuenta salió.
+
+> **Pendiente:** compartir la carpeta con Flor como editora, para que pueda ver
+> y descargar la lista cuando quiera.
+
 ## Ya creado
 
 | | |
@@ -20,14 +33,28 @@ Formulario (navegador)  ──POST JSON──▶  Apps Script  ──▶  contac
 | Carpeta | [CONTACTOS COACH](https://drive.google.com/drive/folders/1Pjj7OphD18YmOONx7xgvzn1snw7dtwBT) |
 | Archivo | [contactos.txt](https://drive.google.com/file/d/1C8BVMY_souttA36YxpPXSvsiG3VNQgL5/view) |
 | ID del archivo | `1C8BVMY_souttA36YxpPXSvsiG3VNQgL5` (ya está en `Codigo.gs`) |
+| Dueña | gise.ares@gmail.com |
+
+### Si algún día conviene pasarlo a la cuenta de Flor
+
+La lista son datos personales de la audiencia de Flor, y la responsable de esos
+datos es ella. Si en algún momento se termina la colaboración, o simplemente se
+quiere ordenar, el traspaso es:
+
+1. En Drive, botón derecho sobre la carpeta → Compartir → junto a Flor, cambiar
+   su rol a **Propietario**.
+2. Flor vuelve a publicar el script desde su cuenta, siguiendo los pasos de
+   abajo. El ID del archivo no cambia.
+3. Pegar la nueva URL en `NEWSLETTER_ENDPOINT`, dentro de `script.js`.
 
 El archivo arranca con una fila de encabezado: `fecha  email  dispositivo`,
 separada por tabulaciones. Así se abre directo como tabla en Sheets o Excel.
 
 ## Publicar el script (una sola vez)
 
-Esto hay que hacerlo desde la cuenta de Google de Florencia; no se puede
-automatizar desde acá.
+Hay que hacerlo a mano, entrando con **gise.ares@gmail.com**: publicar una
+aplicación web requiere aceptar los permisos de la cuenta en el navegador, así
+que no se puede automatizar.
 
 1. Entrar a [script.google.com](https://script.google.com) y crear un proyecto
    nuevo, llamado por ejemplo **Newsletter Coach**.
@@ -38,8 +65,7 @@ automatizar desde acá.
    - *Quién tiene acceso*: **Cualquier usuario**
 5. Google va a pedir autorización para acceder al Drive. Aceptar. Como el script
    no está verificado, aparece una advertencia: **Configuración avanzada → Ir a
-   Newsletter Coach (no seguro)**. Es el propio script de Florencia, no un
-   tercero.
+   Newsletter Coach (no seguro)**. Es un script propio, no de un tercero.
 6. Copiar la **URL de la aplicación web**. Termina en `/exec`.
 7. Pegar esa URL en `script.js`, en la constante del principio:
 
