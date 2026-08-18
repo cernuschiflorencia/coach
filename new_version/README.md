@@ -32,6 +32,10 @@ formación, testimonios, CTA final, newsletter y footer.
   dots, foco visible, textos alternativos y soporte de `prefers-reduced-motion`.
 - Verificado en 1440px y en 390px: sin scroll horizontal, sin errores de consola,
   sin anchors ni referencias de iconos rotas.
+- Un solo color oscuro en toda la página: el token `--navy` (`#16323c`), usado en
+  titulares, botones, CTA final y footer. `--navy-2` es su hover.
+- El newsletter guarda cada alta en `contactos.txt` dentro de la carpeta
+  CONTACTOS COACH del Drive, vía un Apps Script. Ver `apps-script/README.md`.
 
 ## Pendiente antes de publicar
 
@@ -47,14 +51,22 @@ formación, testimonios, CTA final, newsletter y footer.
 4. **Denominación de la formación** — validar contra los certificados antes de
    publicar la referencia a ICF y al programa ACTP (Documento Maestro §12).
    Recordar que no se usa la sigla MCC.
-5. **Testimonios reales y autorizados** — los tres actuales son de ejemplo y
-   están marcados como pendientes en pantalla.
-6. **Newsletter** — el formulario valida el email pero no envía nada. Falta
-   conectar un proveedor de email marketing.
+5. **Textos de los testimonios** — los testimonios ya están firmados por Claudia,
+   Carlos y Romina, pero **las tres frases siguen siendo las de ejemplo que se
+   escribieron al armar la maqueta**. Hay que reemplazarlas por lo que dijeron
+   realmente. Publicar un texto inventado con el nombre de una persona real es
+   atribuirle algo que no dijo, así que esto es bloqueante.
+6. **Newsletter** — el formulario ya está programado y guarda en Drive, pero
+   falta publicar el Apps Script y pegar su URL en `NEWSLETTER_ENDPOINT`, arriba
+   de `script.js`. Paso a paso en `apps-script/README.md`. Mientras la constante
+   esté vacía, el formulario valida y muestra el cartel de gracias pero **no
+   guarda nada**, y lo avisa por consola.
 7. **Páginas internas** — las 12 URLs del Documento Maestro. Las cards de
-   especialidades ya tienen comentado el `href` definitivo de cada una; hoy
-   apuntan a `#contacto` para no dejar links rotos.
+   especialidades ya tienen comentado el `href` definitivo de cada una.
 8. **Política de privacidad y términos** — los dos links del footer están vacíos.
+   Ahora es bloqueante: desde que el newsletter guarda emails se están tratando
+   datos personales (Ley 25.326 en Argentina, GDPR si hay visitas de Europa). El
+   formulario ya muestra la microcopia que anticipa el uso de los datos.
 9. **Open Graph** — falta `og-cover.jpg` de 1200x630; el meta está comentado.
 10. **Sitemap, robots y Search Console** — cuando exista la estructura de URLs.
 

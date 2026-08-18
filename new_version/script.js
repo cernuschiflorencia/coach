@@ -94,21 +94,45 @@ if (track && dotsBox) {
 }
 
 /* ---------- Newsletter ----------
-   PENDIENTE: conectar a un proveedor de email marketing. Hasta entonces el
-   formulario valida en el cliente y avisa que la suscripción no está activa,
-   en lugar de recargar la página y simular un envío.                          */
-const newsForm = document.querySelector('.news-form');
+   Manda la suscripción a un Apps Script que la agrega a contactos.txt en el
+   Drive de Florencia. Ver apps-script/README.md para publicarlo y pegar la URL
+   acá abajo. Con la constante vacía el formulario funciona igual, pero no
+   guarda nada: sirve para probar la interfaz sin fingir que se registró.      */
+const NEWSLETTER_ENDPOINT = '';
 
-newsForm?.addEventListener('submit', e => {
+/* Sólo Móvil/Escritorio y el sistema operativo si el navegador lo informa.
+   A propósito es un dato grueso: no identifica a nadie. */
+const detectarDispositivo = () => {
+  const ua = navigator.userAgentData;
+  if (ua) {
+    return (ua.mobile ? 'Móvil' : 'Escritorio') + (ua.platform ? ` · ${ua.platform}` : '');
+  }
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ? 'Móvil' : 'Escritorio';
+};
+
+const newsForm = document.querySelector('.news-form');
+const dialogoGracias = document.querySelector('#dialogo-gracias');
+
+document.querySelectorAll('[data-cerrar-dialogo]').forEach(boton => {
+  boton.addEventListener('click', () => dialogoGracias?.close());
+});
+
+// Clic en el fondo oscuro: el <dialog> ocupa toda la pantalla, así que el
+// click cae en el propio dialog sólo cuando es fuera del recuadro.
+dialogoGracias?.addEventListener('click', e => {
+  if (e.target === dialogoGracias) dialogoGracias.close();
+});
+
+newsForm?.addEventListener('submit', async e => {
   e.preventDefault();
   const input = newsForm.querySelector('input[type="email"]');
+  const boton = newsForm.querySelector('button[type="submit"]');
   const status = newsForm.querySelector('.form-status');
   if (!input || !status) return;
 
-  const value = input.value.trim();
-  const looksLikeEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+  const email = input.value.trim();
 
-  if (!looksLikeEmail) {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
     status.dataset.state = 'error';
     status.textContent = 'Revisá el correo ingresado.';
     input.focus();
@@ -116,7 +140,41 @@ newsForm?.addEventListener('submit', e => {
   }
 
   delete status.dataset.state;
-  status.textContent = 'La suscripción todavía no está conectada. Escribinos por correo mientras tanto.';
+  status.textContent = 'Enviando…';
+  boton.disabled = true;
+
+  const exito = () => {
+    newsForm.reset();
+    status.textContent = '';
+    dialogoGracias?.showModal();
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'newsletter_alta' });
+  };
+
+  if (!NEWSLETTER_ENDPOINT) {
+    console.warn('[newsletter] NEWSLETTER_ENDPOINT está vacío: no se guardó nada. Ver apps-script/README.md');
+    boton.disabled = false;
+    exito();
+    return;
+  }
+
+  try {
+    // Sin cabeceras propias el navegador manda text/plain, que no dispara
+    // preflight: Apps Script no responde a las peticiones OPTIONS.
+    const r = await fetch(NEWSLETTER_ENDPOINT, {
+      method: 'POST',
+      body: JSON.stringify({ email, dispositivo: detectarDispositivo() })
+    });
+    const datos = await r.json();
+    if (!datos.ok) throw new Error(datos.error || 'respuesta sin ok');
+    exito();
+  } catch (err) {
+    console.error('[newsletter]', err);
+    status.dataset.state = 'error';
+    status.textContent = 'No pudimos registrarte. Probá de nuevo o escribinos por WhatsApp.';
+  } finally {
+    boton.disabled = false;
+  }
 });
 
 /* ---------- Medición de clics en CTA ----------
