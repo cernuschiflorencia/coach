@@ -1,7 +1,11 @@
 # Florencia Cernuschi — nueva versión
 
-Home implementada siguiendo el mockup aprobado (`mockup.jpg`) para el diseño y el
-Documento Maestro para los textos, la jerarquía de encabezados y el SEO.
+Sitio de Florencia Cernuschi, Coach Ontológica Profesional. Implementado siguiendo
+el mockup aprobado para el diseño y el Documento Maestro para los textos, la
+jerarquía de encabezados y el SEO.
+
+GitHub Pages lo publica desde la raíz de `main`, en
+https://cernuschiflorencia.github.io/coach/
 
 ## Archivos
 
@@ -11,8 +15,14 @@ Documento Maestro para los textos, la jerarquía de encabezados y el SEO.
 - `script.js` — menú móvil, carrusel de testimonios, validación del newsletter y
   medición de clics en CTA.
 - `assets/` — imágenes. Ver `assets/README.md` para lo que falta.
-- `mockup.jpg` — referencia visual aprobada.
-- `Documento_Maestro_...docx` — especificación editorial, UX, SEO y GEO.
+- `politica-de-privacidad.html` y `terminos-y-condiciones.html` — páginas legales.
+- `_internos/` — material de trabajo que **no se publica**: el mockup aprobado, el
+  Documento Maestro y el Apps Script del newsletter. GitHub Pages corre Jekyll, que
+  ignora las carpetas que empiezan con guion bajo.
+
+El sitio anterior quedó guardado en el tag `sitio-v1` y en la rama
+`sitio-anterior`. Para recuperar un archivo suyo:
+`git checkout sitio-v1 -- index.html`
 
 ## Qué está hecho
 
@@ -35,7 +45,7 @@ formación, testimonios, CTA final, newsletter y footer.
 - Un solo color oscuro en toda la página: el token `--navy` (`#16323c`), usado en
   titulares, botones, CTA final y footer. `--navy-2` es su hover.
 - El newsletter guarda cada alta en `contactos.txt` dentro de la carpeta
-  CONTACTOS COACH del Drive, vía un Apps Script. Ver `apps-script/README.md`.
+  CONTACTOS COACH del Drive, vía un Apps Script. Ver `_internos/apps-script/README.md`.
 
 ## Pendiente antes de publicar
 
@@ -59,7 +69,7 @@ formación, testimonios, CTA final, newsletter y footer.
 6. ~~Newsletter~~ — **hecho**. El Apps Script está publicado y la URL cargada en
    `NEWSLETTER_ENDPOINT`. Cada alta se guarda en `contactos.txt`, en la carpeta
    CONTACTOS COACH del Drive de gise.ares@gmail.com, compartida con Flor. Detalle
-   en `apps-script/README.md`.
+   en `_internos/apps-script/README.md`.
 7. **Páginas internas** — las 12 URLs del Documento Maestro. Las cards de
    especialidades ya tienen comentado el `href` definitivo de cada una.
 8. ~~Páginas legales~~ — **hecho**. `politica-de-privacidad.html` y
@@ -101,7 +111,7 @@ formación, testimonios, CTA final, newsletter y footer.
   cotidianas con el dinero, conviene cambiarla.
 - **Las fotos del hero y "Sobre mí".** El hero usa `banner_test.jpg` (Vitaly Gariev / Unsplash),
   recortada a 4:3 y servida en WebP con fallback JPEG en dos tamaños. El retrato
-  de Flor pasó a "Sobre mí": viene de `images/flor.png`, tenía fondo blanco
+  de Flor pasó a "Sobre mí": viene del `images/flor.png` del sitio anterior (hoy en el tag `sitio-v1`), tenía fondo blanco
   sólido y se le hizo el recorte a transparencia. Quedó en 428x553 px, que
   alcanza justo, así que conviene el original en alta. Detalle en
   `assets/README.md`.
@@ -109,6 +119,6 @@ formación, testimonios, CTA final, newsletter y footer.
 ## Cómo previsualizar
 
 ```sh
-cd new_version && python3 -m http.server 8788
+python3 -m http.server 8788
 # abrir http://localhost:8788/
 ```

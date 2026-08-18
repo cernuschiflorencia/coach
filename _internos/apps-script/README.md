@@ -67,7 +67,8 @@ que no se puede automatizar.
    no está verificado, aparece una advertencia: **Configuración avanzada → Ir a
    Newsletter Coach (no seguro)**. Es un script propio, no de un tercero.
 6. Copiar la **URL de la aplicación web**. Termina en `/exec`.
-7. Pegar esa URL en `script.js`, en la constante del principio:
+7. Pegar esa URL en `script.js`, que está en la raíz del repositorio, en la constante
+del principio:
 
    ```js
    const NEWSLETTER_ENDPOINT = 'https://script.google.com/macros/s/AKfy.../exec';

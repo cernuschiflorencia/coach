@@ -1,1173 +1,594 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="images/favicon-32x32.png"/>
-    <title>Flor Cernuschi - Coach Ontológico ICF</title>
-    
-    <!-- Meta Tags -->
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5N4RTZP9');</script>
-    <!-- End Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17258777133">
-    </script>
-    <script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Florencia Cernuschi | Coach Ontológica Profesional ICF</title>
+  <meta name="description" content="Coaching ontológico profesional para objetivos, cambios y desarrollo profesional. Conocé el enfoque y las especialidades de Florencia Cernuschi.">
+  <link rel="canonical" href="https://cernuschiflorencia.github.io/coach/">
+
+  <meta property="og:title" content="Florencia Cernuschi | Coach Ontológica Profesional ICF">
+  <meta property="og:description" content="Transformá tus objetivos en acciones concretas. Coaching ontológico profesional para personas, profesionales y emprendedores.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cernuschiflorencia.github.io/coach/">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Florencia Cernuschi">
+  <!-- PENDIENTE: subir una imagen de 1200x630 y descomentar.
+  <meta property="og:image" content="https://cernuschiflorencia.github.io/coach/assets/og-cover.jpg">
+  <meta property="og:image:alt" content="Florencia Cernuschi, Coach Ontológica Profesional"> -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Florencia Cernuschi | Coach Ontológica Profesional ICF">
+  <meta name="twitter:description" content="Coaching ontológico profesional para objetivos, cambios y desarrollo profesional.">
+
+  <meta name="theme-color" content="#16323c">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5N4RTZP9');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17258777133"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-17258777133');
-    </script>
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1c9687f1ac.js" crossorigin="anonymous"></script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" fill-opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" fill-opacity="0.03"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" fill-opacity="0.04"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-        }
-
-        .hero-content {
-            text-align: center;
-            color: white;
-            z-index: 2;
-            max-width: 800px;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: slideInUp 1s ease-out;
-        }
-
-        .hero .subtitle {
-            font-size: 1.3rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            animation: slideInUp 1s ease-out 0.2s both;
-        }
-
-        .hero .description {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            animation: slideInUp 1s ease-out 0.4s both;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: slideInUp 1s ease-out 0.6s both;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-3px);
-            text-decoration: none;
-        }
-
-        /* Floating elements */
-        .floating-element {
-            position: absolute;
-            opacity: 0.1;
-            animation: floatRandom 15s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 5s;
-        }
-
-        .floating-element:nth-child(3) {
-            bottom: 30%;
-            left: 20%;
-            animation-delay: 10s;
-        }
-
-        @keyframes floatRandom {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-30px) rotate(5deg); }
-            50% { transform: translateY(0px) rotate(-3deg); }
-            75% { transform: translateY(20px) rotate(2deg); }
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 5rem 2rem;
-            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content .highlight {
-            color: #667eea;
-            font-weight: 600;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #666;
-        }
-
-        .credentials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .credential {
-            background: #667eea;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .profile-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1.5rem;
-            border: 5px solid #f8f9fa;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        /* Services Section */
-        .services-section {
-            padding: 5rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            color: #667eea;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .service-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Pricing Section */
-        .pricing-section {
-            padding: 5rem 2rem;
-            background: white;
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            border-color: #667eea;
-            transform: translateY(-5px);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-subtitle {
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        /* Client Types Section */
-        .client-types-section {
-            padding: 5rem 2rem;
-            background: white;
-        }
-
-        .client-types-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .client-type-card {
-            background: #f8f9fa;
-            padding: 2.5rem;
-            border-radius: 15px;
-            display: flex;
-            align-items: flex-start;
-            gap: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid transparent;
-        }
-
-        .client-type-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .client-type-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .client-type-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            border-color: #667eea;
-            background: white;
-        }
-
-        .client-icon {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-        }
-
-        .client-content {
-            flex: 1;
-        }
-
-        .client-content h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .client-content p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        .client-content strong {
-            color: #667eea;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            text-align: center;
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Calendar Section */
-        .calendar-section {
-            padding: 5rem 2rem;
-            background: #f8f9fa;
-            text-align: center;
-        }
-
-        .calendar-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-        }
-
-        .calendar-container iframe {
-            width: 100%;
-            min-height: 600px;
-            border: none;
-            border-radius: 10px;
-        }
-
-        /* Footer */
-        .footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 2rem 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .footer-section p {
-            color: #ecf0f1;
-            line-height: 1.6;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #34495e;
-            color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: #667eea;
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid #34495e;
-            color: #95a5a6;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 1rem;
-                min-height: 100vh;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-                padding: 0 1rem;
-            }
-
-            .hero .description {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-                padding: 0 1rem;
-            }
-
-            .hero-content {
-                padding: 1rem;
-                max-width: 100%;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-section, .services-section, .pricing-section, .client-types-section, .cta-section {
-                padding: 3rem 1rem;
-            }
-
-            .client-type-card {
-                flex-direction: column;
-                text-align: center;
-                gap: 1.5rem;
-                margin: 0 1rem;
-            }
-
-            .client-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 1.8rem;
-                margin: 0 auto;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 280px;
-                justify-content: center;
-                text-align: center;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer {
-                padding: 2rem 1rem 1rem;
-            }
-
-            .whatsapp-btn {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 1.3rem;
-            }
-
-            .services-grid, .pricing-cards {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .service-card, .pricing-card {
-                margin: 0 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-                padding: 0 1rem;
-            }
-
-            .profile-card {
-                margin: 0 1rem;
-            }
-
-            .about-content {
-                padding: 0 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 1rem 0.5rem;
-                min-height: 100vh;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-                line-height: 1.2;
-            }
-
-            .hero .subtitle {
-                font-size: 0.9rem;
-                line-height: 1.4;
-                padding: 0 0.5rem;
-            }
-
-            .hero .description {
-                font-size: 0.95rem;
-                line-height: 1.5;
-                padding: 0 0.5rem;
-            }
-
-            .hero-content {
-                padding: 0.5rem;
-            }
-
-            .section-title {
-                font-size: 1.7rem;
-                padding: 0 0.5rem;
-            }
-
-            .about-content h2 {
-                font-size: 1.8rem;
-                padding: 0 0.5rem;
-            }
-
-            .cta-section h2 {
-                font-size: 1.8rem;
-                padding: 0 0.5rem;
-            }
-
-            .cta-section p {
-                font-size: 1rem;
-                padding: 0 0.5rem;
-            }
-
-            .btn {
-                padding: 12px 20px;
-                font-size: 1rem;
-                width: 100%;
-                max-width: 250px;
-            }
-
-            .service-card, .pricing-card {
-                margin: 0 0.5rem;
-                padding: 2rem 1.5rem;
-            }
-
-            .client-type-card {
-                margin: 0 0.5rem;
-                padding: 2rem 1.5rem;
-                flex-direction: column;
-                text-align: center;
-                gap: 1.5rem;
-            }
-
-            .client-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
-                margin: 0 auto;
-            }
-
-            .profile-card {
-                margin: 0 0.5rem;
-                padding: 1.5rem;
-            }
-
-            .about-content, .container {
-                padding: 0 0.5rem;
-            }
-
-            .credentials {
-                justify-content: center;
-            }
-
-            .credential {
-                font-size: 0.8rem;
-                padding: 0.4rem 0.8rem;
-            }
-
-            .floating-element {
-                display: none;
-            }
-
-            .footer {
-                padding: 2rem 0.5rem 1rem;
-            }
-
-            /* Fix any horizontal overflow */
-            body {
-                overflow-x: hidden;
-            }
-
-            * {
-                max-width: 100%;
-                box-sizing: border-box;
-            }
-        }
-
-        /* Extra small devices */
-        @media (max-width: 360px) {
-            .hero h1 {
-                font-size: 1.6rem;
-            }
-
-            .hero .subtitle {
-                font-size: 0.85rem;
-            }
-
-            .hero .description {
-                font-size: 0.9rem;
-            }
-
-            .btn {
-                padding: 10px 15px;
-                font-size: 0.95rem;
-                max-width: 220px;
-            }
-
-            .service-card, .pricing-card {
-                margin: 0 0.25rem;
-                padding: 1.5rem 1rem;
-            }
-
-            .client-type-card {
-                margin: 0 0.25rem;
-                padding: 1.5rem 1rem;
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .client-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 1.3rem;
-                margin: 0 auto;
-            }
-
-            .profile-card {
-                margin: 0 0.25rem;
-                padding: 1rem;
-            }
-
-            .profile-img {
-                width: 150px;
-                height: 150px;
-            }
-        }
-    </style>
+  </script>
+  <!-- End Google Ads -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://cernuschiflorencia.github.io/coach/#website",
+        "url": "https://cernuschiflorencia.github.io/coach/",
+        "name": "Florencia Cernuschi — Coach Ontológica Profesional",
+        "inLanguage": "es-AR",
+        "publisher": { "@id": "https://cernuschiflorencia.github.io/coach/#florencia" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://cernuschiflorencia.github.io/coach/#florencia",
+        "name": "Florencia Cernuschi",
+        "jobTitle": "Coach Ontológica Profesional",
+        "url": "https://cernuschiflorencia.github.io/coach/",
+        "description": "Coach Ontológica Profesional especializada en desarrollo profesional, coaching ejecutivo, emprendimiento, coaching vocacional, liderazgo y coaching en finanzas personales.",
+        "knowsAbout": [
+          "Coaching ontológico",
+          "Coaching ejecutivo",
+          "Coaching para emprendedores",
+          "Coaching vocacional",
+          "Coaching en finanzas personales",
+          "Liderazgo"
+        ],
+        "sameAs": ["https://www.linkedin.com/in/cernuschiflorencia/"]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://cernuschiflorencia.github.io/coach/#servicio",
+        "name": "Coaching Ontológico Profesional — Florencia Cernuschi",
+        "url": "https://cernuschiflorencia.github.io/coach/",
+        "description": "Procesos de coaching ontológico para trabajar objetivos, decisiones, cambios profesionales, emprendimiento y liderazgo.",
+        "provider": { "@id": "https://cernuschiflorencia.github.io/coach/#florencia" },
+        "areaServed": "Sesiones online",
+        "availableLanguage": "es",
+        "telephone": "+5491153842626",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Agendar una sesión",
+          "telephone": "+5491153842626",
+          "availableLanguage": "es"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Especialidades",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coaching Ejecutivo" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coaching para Emprendedores" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coaching Vocacional" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coaching en Finanzas Personales" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Liderazgo" } }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5N4RTZP9"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Hero Section -->
-    <section class="hero">
-        <!-- Floating elements -->
-        <div class="floating-element">
-            <i class="fas fa-lightbulb" style="font-size: 3rem;"></i>
-        </div>
-        <div class="floating-element">
-            <i class="fas fa-target" style="font-size: 2.5rem;"></i>
-        </div>
-        <div class="floating-element">
-            <i class="fas fa-rocket" style="font-size: 3.5rem;"></i>
-        </div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5N4RTZP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-        <div class="hero-content">
-            <h1>Florencia Cernuschi</h1>
-            <div class="subtitle">Coach Ontológico ICF • Especialista en Emprendedores y Ejecutivos</div>
-            <div class="description">
-                Descubre tu verdadero potencial y transforma tus objetivos en realidad. 
-                Un enfoque profundo y práctico para el crecimiento personal y profesional.
-            </div>
-            <div class="cta-buttons">
-                <a href="https://wa.me/5491153842626?text=Hola%20Florencia,%20me%20interesa%20agendar%20una%20sesión%20de%20coaching" class="btn btn-primary" target="_blank">
-                    <i class="fas fa-calendar-alt"></i>
-                    Agendar Sesión
-                </a>
-                <a href="#sobre-mi" class="btn btn-secondary">
-                    <i class="fas fa-user"></i>
-                    Conoce mi Método
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- ============ Sprite de iconos ============ -->
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <!-- diferenciadores -->
+  <symbol id="i-personas" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.1 2.5-5.5 5.5-5.5s5.5 2.4 5.5 5.5"/><path d="M16.2 5.4a3 3 0 0 1 0 5.6"/><path d="M17 14.9c2 .7 3.5 2.6 3.5 5.1"/></symbol>
+  <symbol id="i-objetivo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.8"/><circle cx="12" cy="12" r="1.3"/></symbol>
+  <symbol id="i-brujula" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M15.4 8.6l-2 4.8-4.8 2 2-4.8z"/></symbol>
+  <symbol id="i-progreso" viewBox="0 0 24 24"><path d="M3.5 20.5h17"/><path d="M6.5 20.5v-5"/><path d="M11 20.5v-9"/><path d="M15.5 20.5v-6"/><path d="M20 20.5v-12"/></symbol>
 
-    <!-- About Section -->
-    <section class="about-section" id="sobre-mi">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2>Transformación que <span class="highlight">Perdura</span></h2>
-                    <p>
-                        ¿Te sientes estancado con la sensación de que podrías lograr más pero no sabes por dónde empezar? 
-                        Mi propósito es ayudarte a superar esos bloqueos y potenciar tus habilidades.
-                    </p>
-                    <p>
-                        Como <strong>Coach Ontológico ICF</strong>, trabajo con un enfoque transformador que combina 
-                        la profundidad del autoconocimiento con herramientas prácticas de planificación y gestión emocional.
-                    </p>
-                    
-                    <div class="credentials">
-                        <div class="credential">Coach ICF Ontológico</div>
-                        <div class="credential">Emprendedores</div>
-                        <div class="credential">Ejecutivos</div>
-                        <div class="credential">Liderazgo Ágil</div>
-                    </div>
+  <!-- situaciones -->
+  <symbol id="i-cartel" viewBox="0 0 24 24"><path d="M12 3.5v17"/><path d="M4.5 6.5h11l3 2.5-3 2.5h-11z"/><path d="M19.5 13.5h-11l-3 2.5 3 2.5h11z"/></symbol>
+  <symbol id="i-red" viewBox="0 0 24 24"><circle cx="6" cy="6.5" r="2.2"/><circle cx="18" cy="7.5" r="2.2"/><circle cx="12" cy="17.5" r="2.2"/><path d="M7.9 7.7l2.5 8"/><path d="M16.3 8.9l-2.7 6.9"/><path d="M8.2 6.9l7.6.8"/></symbol>
+  <symbol id="i-cumbre" viewBox="0 0 24 24"><path d="M2.5 19.5h19"/><path d="M2.5 19.5L9 8l3.2 5.2L14.5 9l6 10.5"/><path d="M14.5 9V3.5h4.5"/></symbol>
+  <symbol id="i-bifurcacion" viewBox="0 0 24 24"><path d="M12 20.5v-7"/><path d="M12 13.5L6.5 8"/><path d="M12 13.5L17.5 8"/><path d="M6.5 8V4.5h3.5"/><path d="M17.5 8V4.5H14"/></symbol>
+  <symbol id="i-idea" viewBox="0 0 24 24"><path d="M9 17.5h6"/><path d="M9.8 20.5h4.4"/><path d="M12 3.5a6 6 0 0 1 3.6 10.8c-.4.3-.6.8-.6 1.3v.9H9v-.9c0-.5-.2-1-.6-1.3A6 6 0 0 1 12 3.5z"/></symbol>
+  <symbol id="i-transicion" viewBox="0 0 24 24"><circle cx="12" cy="6.5" r="2.8"/><path d="M12 9.3v7"/><path d="M12 16.3l-3.5 4.2"/><path d="M12 16.3l3.5 4.2"/><path d="M4 12.5h3"/><path d="M17 12.5h3"/></symbol>
 
-                    <div style="margin-top: 2rem;">
-                        <h3 style="color: #667eea; margin-bottom: 1rem;">Lo que lograrás:</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Claridad en tus objetivos y un plan de acción concreto</li>
-                            <li style="margin-bottom: 0.8rem;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Habilidades para gestionar el cambio y la incertidumbre</li>
-                            <li style="margin-bottom: 0.8rem;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Mayor confianza para tomar decisiones con seguridad</li>
-                        </ul>
-                    </div>
-                </div>
+  <!-- metodología -->
+  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.3 15.3l5.2 5.2"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M10 8.6l5.4 3.4L10 15.4z"/></symbol>
+  <symbol id="i-crecimiento" viewBox="0 0 24 24"><path d="M3.5 20.5h17"/><path d="M6 16.5l4-4.5 3.5 2.5L20 7"/><path d="M15.5 7H20v4.5"/></symbol>
 
-                <div class="profile-card">
-                    <img src="images/flor.png" alt="Florencia Cernuschi" class="profile-img" 
-                         onerror="this.src='https://via.placeholder.com/200x200/667eea/ffffff?text=FC'">
-                    
-                    <h3 style="color: #333; margin-bottom: 0.5rem;">Florencia Cernuschi</h3>
-                    <p style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Coach Ontológico ICF</p>
-                    <p style="color: #666; font-size: 0.9rem;">
-                        Relaciones Públicas y Especialista en Liderazgo Ágil. 
-                        Liderando equipos de alto rendimiento con metodologías ágiles.
-                    </p>
-                    
-                    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
-                        <div style="text-align: center;">
-                            <div style="font-size: 0.8rem; color: #999;">⭐</div>
-                            <div style="font-size: 0.8rem; color: #666;">Personal/Ejecutivo</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 0.8rem; color: #999;">👥</div>
-                            <div style="font-size: 0.8rem; color: #666;">Online</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 0.8rem; color: #999;">📍</div>
-                            <div style="font-size: 0.8rem; color: #666;">Nómade</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- formación -->
+  <symbol id="i-diploma" viewBox="0 0 24 24"><circle cx="12" cy="9.5" r="5.5"/><path d="M9 14.4l-1 6 4-2.2 4 2.2-1-6"/></symbol>
+  <symbol id="i-globo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M3.4 12h17.2"/><path d="M12 3.2c2.4 2.4 3.6 5.4 3.6 8.8s-1.2 6.4-3.6 8.8c-2.4-2.4-3.6-5.4-3.6-8.8S9.6 5.6 12 3.2z"/></symbol>
+  <symbol id="i-capas" viewBox="0 0 24 24"><path d="M12 3.5l8.5 4.3L12 12 3.5 7.8z"/><path d="M3.5 12.2L12 16.5l8.5-4.3"/><path d="M3.5 16.4L12 20.7l8.5-4.3"/></symbol>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
-            <h2 class="section-title">Mi Enfoque de Coaching</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-compass"></i>
-                    </div>
-                    <h3>Autoconocimiento Profundo</h3>
-                    <p>Descubre tus patrones limitantes y potencia tus fortalezas naturales a través de un proceso de reflexión guiada y herramientas ontológicas.</p>
-                </div>
+  <!-- varios -->
+  <symbol id="i-sobre" viewBox="0 0 24 24"><rect x="2.8" y="5.3" width="18.4" height="13.4" rx="1.6"/><path d="M3.5 6.3l8.5 6.4 8.5-6.4"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2.8" y="4.3" width="18.4" height="12.4" rx="1.6"/><path d="M8.5 20.2h7"/><path d="M12 16.7v3.5"/></symbol>
+  <symbol id="i-cita" viewBox="0 0 24 24"><path d="M10 6.5C6.7 7.7 5 10.2 5 14v3.5h4.5V12H7.8c.2-2 1-3.4 2.6-4.2z"/><path d="M19.5 6.5c-3.3 1.2-5 3.7-5 7.5v3.5H19V12h-1.7c.2-2 1-3.4 2.6-4.2z"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.25-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.27-.2-.57-.35M12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89a9.82 9.82 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.42z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.86-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.97 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+</svg>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Planificación Estratégica</h3>
-                    <p>Convierte tus visiones en planes de acción concretos y alcanzables, con metodologías probadas para el éxito empresarial y personal.</p>
-                </div>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Gestión Emocional</h3>
-                    <p>Desarrolla inteligencia emocional para liderar con confianza, tomar mejores decisiones y crear relaciones más efectivas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="container">
-            <h2 class="section-title">Inversión en tu Crecimiento</h2>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <h3>🕑 Sesión Online</h3>
-                    <div class="price">$30.000</div>
-                    <div class="price-subtitle">ARS por sesión</div>
-                    <p>Ideal para clientes en Argentina. Sesión completa de coaching ontológico con seguimiento personalizado.</p>
-                    <a href="https://wa.me/5491153842626?text=Hola%20Florencia,%20me%20interesa%20agendar%20una%20sesión%20de%20coaching" class="btn btn-primary" style="margin-top: 1rem;" target="_blank">Reservar Ahora</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>🌎 Sesión Internacional</h3>
-                    <div class="price">USD 25</div>
-                    <div class="price-subtitle">por sesión</div>
-                    <p>Para clientes del exterior. Adaptado a diferentes zonas horarias y contextos culturales.</p>
-                    <a href="https://wa.me/5491153842626?text=Hola%20Florencia,%20me%20interesa%20agendar%20una%20sesión%20de%20coaching" class="btn btn-primary" style="margin-top: 1rem;" target="_blank">Reservar Ahora</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>🤝 Mentorias</h3>
-                    <div class="price">ARS $45.000  USD 40</div>
-                    <div class="price-subtitle">por sesión</div>
-                    <p>Mentoría personalizada para ordenar ideas y accionar.</p>
-                    <a href="https://wa.me/5491153842626?text=Hola%20Florencia,%20me%20interesa%20agendar%20una%20sesión%20de%20mentoria" class="btn btn-primary" style="margin-top: 1rem;" target="_blank">Reservar Ahora</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>📚 Coaching Vocacional y de Propósito</h3>
-                    <div class="price">ARS $40.000  USD 40</div>
-                    <div class="price-subtitle">por sesión</div>
-                    <p>Ideal si estás redefiniendo carrera, estudios o un cambio de rumbo.</p>
-                    <a href="https://wa.me/5491153842626?text=Hola%20Florencia,%20me%20interesa%20agendar%20una%20sesión%20de%20vocacional" class="btn btn-primary" style="margin-top: 1rem;" target="_blank">Reservar Ahora</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Types Section -->
-    <section class="client-types-section">
-        <div class="container">
-            <h2 class="section-title">¿Con Quién Trabajo?</h2>
-            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Cada persona tiene desafíos únicos. Mi enfoque se adapta a diferentes perfiles para lograr resultados específicos.
-            </p>
-            <div class="client-types-grid">
-                <div class="client-type-card">
-                    <div class="client-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="client-content">
-                        <h3>Empresarios</h3>
-                        <p>Que quieren empezar una nueva etapa en su carrera o negocio, gestionando de manera más efectiva y vital todo su conocimiento y experiencia. <strong>Aprende a disfrutar el proceso transformacional en armonía con tu ecosistema actual.</strong></p>
-                    </div>
-                </div>
-
-                <div class="client-type-card">
-                    <div class="client-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <div class="client-content">
-                        <h3>Viajeros</h3>
-                        <p>Aprende a despojarte de juicios y atrévete a romper paradigmas, redescubre tus herramientas y aprende a utilizarlas para convertirte en viajero de tiempo completo. <strong>Te acompañaré en el proceso para que dejes de soñar con hacerlo y lo conviertas en un plan listo para ejecutar.</strong></p>
-                    </div>
-                </div>
-
-                <div class="client-type-card">
-                    <div class="client-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="client-content">
-                        <h3>Estudiantes</h3>
-                        <p>Aprende a visualizarte y concentrarte en lo que te apasiona, transita el proceso de aprendizaje adquiriendo metodologías que te ayudarán también en el ámbito laboral. <strong>Aprende a gestionar emociones y planifica tu próximo paso al éxito.</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>¿Listo para Transformar tu Realidad?</h2>
-            <p>
-                "Tomar responsabilidad personal es algo hermoso, porque nos da un control completo sobre nuestro destino."
-                <br><em>- Heather Schuck</em>
-            </p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/591153842626?text=Hola%20Florencia,%20me%20interesa%20conocer%20más%20sobre%20tus%20sesiones%20de%20coaching" class="btn btn-secondary" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    Escribirme por WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Lo que Creemos</h3>
-                <p>"Nuestro pasado, nuestro presente y lo que queda de nuestro futuro depende absolutamente de lo que haremos hoy."</p>
-                <p><em>- Silvya Earle</em></p>
-            </div>
-            <div class="footer-section">
-                <h3>Conecta Conmigo</h3>
-                <p>Sígueme en mis redes sociales y mantente al día con consejos, reflexiones y contenido sobre desarrollo personal y liderazgo.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/combicalimbaok/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/cernuschiflorencia/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/channel/UC6gKILvZxRGYUyy86tbJ9VA" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Comparti con ❤️</p>
-            <p>Copyright © 2025 <a href="https://www.linkedin.com/in/giseares/" target="_blank" style="color: #95a5a6; text-decoration: underline;">giseAres</a> All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/5491153842626?text=Hola%20Florencia,%20me%20interesa%20conocer%20más%20sobre%20tus%20sesiones%20de%20coaching" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#inicio" aria-label="Florencia Cernuschi, inicio">
+      <span>FLORENCIA</span><strong>CERNUSCHI</strong><small>COACH ONTOLÓGICA PROFESIONAL</small>
     </a>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span class="bars" aria-hidden="true"></span>
+    </button>
 
-        // Add scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#formacion">Formación</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#contacto">Contacto</a>
+      <!-- Los CTA de "Agendar" van directo a WhatsApp, con un mensaje ya escrito.
+           El link se repite en hero, CTA final y footer: si cambia el número o el
+           texto, hay que actualizarlo en los cuatro. -->
+      <a class="nav-cta" href="https://wa.me/5491153842626?text=Hola%20Florencia%2C%20me%20gustar%C3%ADa%20agendar%20una%20sesi%C3%B3n%20de%20coaching."
+         target="_blank" rel="noopener" data-cta="header">Agendar sesión</a>
+    </nav>
+  </div>
+</header>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+<main id="contenido">
+  <!-- ============ HERO ============ -->
+  <!-- El hero no usa .container: la foto sangra hasta el borde derecho y la
+       columna de texto se alinea sola con el resto de la página. -->
+  <section class="hero" id="inicio">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">COACHING ONTOLÓGICO PROFESIONAL</p>
+        <h1>Transformá tus objetivos en <em>acciones concretas.</em></h1>
+        <p class="hero-lead">Coaching ontológico profesional para quienes quieren avanzar con claridad en sus objetivos, decisiones y procesos de cambio.</p>
 
-        // Observe elements for animations
-        document.querySelectorAll('.service-card, .pricing-card, .about-content, .profile-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
+        <p class="hero-signature">Florencia Cernuschi · Coach Ontológica Profesional</p>
+
+        <div class="authority-lockup">
+          <span class="authority-text">Formación bajo estándares internacionales</span>
+          <!-- PENDIENTE: reemplazar por el logotipo oficial de ICF, respetando las
+               normas de marca de la International Coaching Federation. -->
+          <span class="icf-mark" aria-label="International Coaching Federation">
+            <strong>ICF</strong><small>International<br>Coaching<br>Federation</small>
+          </span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5491153842626?text=Hola%20Florencia%2C%20me%20gustar%C3%ADa%20agendar%20una%20sesi%C3%B3n%20de%20coaching."
+             target="_blank" rel="noopener" data-cta="hero-primario">Agendar una sesión</a>
+          <a class="btn btn-secondary btn-icon" href="#metodologia">
+            <svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>
+            Conocé mi enfoque
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/hero-800.webp 800w, assets/hero-1600.webp 1600w"
+                  sizes="(max-width:860px) 100vw, 50vw">
+          <source type="image/jpeg"
+                  srcset="assets/hero-800.jpg 800w, assets/hero-1600.jpg 1600w"
+                  sizes="(max-width:860px) 100vw, 50vw">
+          <img src="assets/hero-1600.jpg" width="1600" height="1200"
+               class="hero-photo" fetchpriority="high" decoding="async"
+               alt="Una emprendedora trabaja en su taller: boceta a mano sobre la mesa mientras habla por teléfono, con un maniquí de costura y patrones colgados detrás. Foto: Vitaly Gariev / Unsplash">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIFERENCIADORES ============ -->
+  <section class="differentiators" aria-label="Cómo acompaño los procesos">
+    <div class="container diff-grid">
+      <article><svg class="ico" aria-hidden="true"><use href="#i-personas"/></svg><p>Acompañamiento personalizado y confidencial</p></article>
+      <article><svg class="ico" aria-hidden="true"><use href="#i-objetivo"/></svg><p>Enfoque en objetivos claros y resultados concretos</p></article>
+      <article><svg class="ico" aria-hidden="true"><use href="#i-brujula"/></svg><p>Herramientas prácticas para tu día a día</p></article>
+      <article><svg class="ico" aria-hidden="true"><use href="#i-progreso"/></svg><p>Seguimiento y aprendizaje para que el cambio sea sostenible</p></article>
+    </div>
+  </section>
+
+  <!-- ============ SITUACIONES ============ -->
+  <section class="problem section-soft">
+    <div class="container">
+      <div class="section-heading centered">
+        <p class="eyebrow">PARA VOS</p>
+        <h2>¿Sentís que querés avanzar, pero algo te está frenando?</h2>
+      </div>
+
+      <div class="problem-grid">
+        <article><span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-cartel"/></svg></span><p>Tenés un objetivo, pero no conseguís avanzar.</p></article>
+        <article><span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-transicion"/></svg></span><p>Querés hacer un cambio profesional y no sabés por dónde empezar.</p></article>
+        <article><span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-red"/></svg></span><p>Tenés muchas ideas y necesitás ordenar prioridades.</p></article>
+        <article><span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-bifurcacion"/></svg></span><p>Estás atravesando una transición y necesitás tomar una decisión.</p></article>
+        <article><span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-idea"/></svg></span><p>Querés emprender y transformar una idea en un proyecto concreto.</p></article>
+        <article><span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-cumbre"/></svg></span><p>Sabés que algo tiene que cambiar, pero todavía no encontrás cómo.</p></article>
+      </div>
+
+      <p class="section-close">El coaching puede ayudarte a mirar tu situación desde nuevas perspectivas, definir qué querés y diseñar acciones alineadas con tus objetivos.</p>
+    </div>
+  </section>
+
+  <!-- ============ ESPECIALIDADES ============ -->
+  <section id="especialidades" class="specialties section">
+    <div class="container">
+      <div class="section-heading centered">
+        <p class="eyebrow">ESPECIALIDADES</p>
+        <h2>Áreas en las que puedo acompañarte</h2>
+      </div>
+
+      <!-- Cada card sirve WebP con fallback JPEG en dos anchos. Los recortes 4:3
+           y el script que los genera están documentados en assets/README.md. -->
+      <div class="cards five">
+        <!-- Fase 2: href="coaching-ejecutivo/" -->
+        <article class="service-card">
+          <picture>
+            <source type="image/webp" sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                    srcset="assets/esp-ejecutivo-440.webp 440w, assets/esp-ejecutivo-800.webp 800w">
+            <img src="assets/esp-ejecutivo-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                 srcset="assets/esp-ejecutivo-440.jpg 440w, assets/esp-ejecutivo-800.jpg 800w"
+                 alt="Cuatro profesionales conversan alrededor de una mesa de reunión en una oficina luminosa; uno gesticula mientras explica y sobre la mesa hay gráficos impresos. Foto: Vitaly Gariev / Unsplash"></picture>
+          <div class="card-body">
+            <h3>Coaching Ejecutivo</h3>
+            <p>Desarrollo profesional, liderazgo, toma de decisiones y desafíos de gestión.</p>
+          </div>
+        </article>
+
+        <!-- Fase 2: href="coaching-para-emprendedores/" -->
+        <article class="service-card">
+          <picture>
+            <source type="image/webp" sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                    srcset="assets/esp-emprendedores-440.webp 440w, assets/esp-emprendedores-800.webp 800w">
+            <img src="assets/esp-emprendedores-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                 srcset="assets/esp-emprendedores-440.jpg 440w, assets/esp-emprendedores-800.jpg 800w"
+                 alt="Dos emprendedoras trabajan juntas en un escritorio con una laptop, bocetos y notas adhesivas; una toma apuntes mientras la otra escucha. Foto: Vitaly Gariev / Unsplash"></picture>
+          <div class="card-body">
+            <h3>Coaching para Emprendedores</h3>
+            <p>Foco, prioridades, objetivos, bloqueos y transformación de ideas en acción.</p>
+          </div>
+        </article>
+
+        <!-- Fase 2: href="coaching-vocacional/" -->
+        <article class="service-card">
+          <picture>
+            <source type="image/webp" sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                    srcset="assets/esp-vocacional-440.webp 440w, assets/esp-vocacional-800.webp 800w">
+            <img src="assets/esp-vocacional-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                 srcset="assets/esp-vocacional-440.jpg 440w, assets/esp-vocacional-800.jpg 800w"
+                 alt="Una persona de espaldas, parada sobre una roca en la cima, abre los brazos frente a un valle de montañas al amanecer. Foto: Jason Hogan / Unsplash"></picture>
+          <div class="card-body">
+            <h3>Coaching Vocacional</h3>
+            <p>Exploración de posibilidades, transiciones y decisiones de carrera.</p>
+          </div>
+        </article>
+
+        <!-- Fase 2: href="coaching-finanzas-personales/" -->
+        <article class="service-card">
+          <picture>
+            <source type="image/webp" sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                    srcset="assets/esp-finanzas-440.webp 440w, assets/esp-finanzas-800.webp 800w">
+            <img src="assets/esp-finanzas-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                 srcset="assets/esp-finanzas-440.jpg 440w, assets/esp-finanzas-800.jpg 800w"
+                 alt="Vista desde arriba de una persona revisando papeles de finanzas personales, con una calculadora, una lista de documentos, un café y una laptop. Foto: Kelly Sikkema / Unsplash"></picture>
+          <div class="card-body">
+            <h3>Coaching en Finanzas Personales</h3>
+            <p>Objetivos, hábitos y conversaciones relacionadas con el dinero, trabajados desde el coaching.</p>
+            <p class="card-note">No constituye asesoramiento financiero.</p>
+          </div>
+        </article>
+
+        <!-- Fase 2: href="liderazgo/" -->
+        <article class="service-card">
+          <picture>
+            <source type="image/webp" sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                    srcset="assets/esp-liderazgo-440.webp 440w, assets/esp-liderazgo-800.webp 800w">
+            <img src="assets/esp-liderazgo-800.jpg" width="800" height="600" loading="lazy" decoding="async"
+                 sizes="(max-width:520px) calc(100vw - 32px), (max-width:860px) calc(50vw - 28px), (max-width:1080px) calc(33vw - 24px), 220px"
+                 srcset="assets/esp-liderazgo-440.jpg 440w, assets/esp-liderazgo-800.jpg 800w"
+                 alt="Cinco personas de pie sobre la cima de una loma, en silueta contra un cielo al atardecer. Foto: Csaba Veres / Unsplash"></picture>
+          <div class="card-body">
+            <h3>Liderazgo</h3>
+            <p>Desarrollo de liderazgo, conversaciones, decisiones y crecimiento profesional.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METODOLOGÍA ============ -->
+  <section id="metodologia" class="method section-soft">
+    <div class="container method-grid">
+      <div class="method-intro">
+        <p class="eyebrow">MI METODOLOGÍA</p>
+        <h2>Del objetivo a la acción.</h2>
+        <p>Un proceso de coaching comienza donde estás hoy y busca abrir nuevas posibilidades para que puedas decidir y actuar de manera consciente.</p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-lupa"/></svg></span>
+          <h3>1. Claridad</h3>
+          <p>Comprender dónde estás y qué querés realmente.</p>
+        </li>
+        <li>
+          <span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-brujula"/></svg></span>
+          <h3>2. Exploración</h3>
+          <p>Identificar creencias, obstáculos, recursos y posibilidades.</p>
+        </li>
+        <li>
+          <span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-objetivo"/></svg></span>
+          <h3>3. Diseño</h3>
+          <p>Definir objetivos y alternativas posibles.</p>
+        </li>
+        <li>
+          <span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span>
+          <h3>4. Acción</h3>
+          <p>Convertir decisiones en acciones concretas.</p>
+        </li>
+        <li>
+          <span class="icon-circle"><svg class="ico" aria-hidden="true"><use href="#i-crecimiento"/></svg></span>
+          <h3>5. Aprendizaje</h3>
+          <p>Revisar resultados, aprendizajes y próximos pasos.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE MÍ + FORMACIÓN ============ -->
+  <section id="sobre-mi" class="about">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="assets/florencia-retrato.png" width="428" height="553"
+             loading="lazy" decoding="async"
+             alt="Florencia Cernuschi, sentada y sonriendo">
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow">SOBRE MÍ</p>
+        <h2>Soy Florencia.</h2>
+        <p>Soy Coach Ontológica Profesional y acompaño a personas, profesionales y emprendedores que están atravesando procesos de cambio, buscando claridad o queriendo transformar un objetivo en acción.</p>
+        <p>Mi recorrido profesional combina formación en coaching, liderazgo y desarrollo con experiencias diversas que me enseñaron que transformar una realidad requiere mucho más que saber qué queremos: requiere poder mirarla de otra manera, decidir y actuar.</p>
+        <a class="btn btn-secondary" href="https://calimbaok.github.io/calimbaok/"
+           target="_blank" rel="noopener" data-cta="sobre-mi-historia">Conocé mi historia</a>
+      </div>
+
+      <aside class="credentials" id="formacion" aria-labelledby="titulo-formacion">
+        <p class="eyebrow">MI FORMACIÓN</p>
+        <h3 id="titulo-formacion" class="sr-only">Formación y respaldo profesional</h3>
+
+        <div class="cred-item">
+          <span class="icon-circle sm"><svg class="ico" aria-hidden="true"><use href="#i-diploma"/></svg></span>
+          <div>
+            <b>Coach Ontológica Profesional</b>
+            <!-- IMPORTANTE (Documento Maestro §3.6 y §12): validar esta
+                 denominación contra el certificado antes de publicar. -->
+            <span>Líder Coach Argentina · Programa ACTP acreditado por ICF · 2021</span>
+          </div>
+        </div>
+
+        <div class="cred-item">
+          <span class="icon-circle sm"><svg class="ico" aria-hidden="true"><use href="#i-globo"/></svg></span>
+          <div>
+            <b>Leadership</b>
+            <span>Leadership Learning Center · Nueva York, Estados Unidos</span>
+          </div>
+        </div>
+
+        <div class="cred-item">
+          <span class="icon-circle sm"><svg class="ico" aria-hidden="true"><use href="#i-capas"/></svg></span>
+          <div>
+            <b>Especializaciones</b>
+            <ul>
+              <li>Coaching Ejecutivo</li>
+              <li>Coaching para Emprendedores</li>
+              <li>Coaching Vocacional</li>
+              <li>Coaching en Finanzas Personales</li>
+              <li>Leadership / Liderazgo</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIOS ============ -->
+  <section class="testimonials section-soft">
+    <div class="container">
+      <div class="section-heading centered">
+        <p class="eyebrow">EXPERIENCIAS</p>
+        <h2>Experiencias de personas que trabajaron conmigo</h2>
+      </div>
+
+      <!-- PENDIENTE: reemplazar por testimonios reales y autorizados. Estructura
+           sugerida (Documento Maestro §3.8): problema inicial → proceso → cambio
+           percibido. No inventar resultados. -->
+      <div class="testimonial-track" id="testimonios">
+        <figure class="testimonial">
+          <svg class="ico quote" aria-hidden="true"><use href="#i-cita"/></svg>
+          <blockquote><p>Llegué con muchas dudas sobre mi próximo paso profesional y pude ordenar lo que quería y convertirlo en un plan.</p></blockquote>
+          <figcaption><span class="avatar" aria-hidden="true"></span><span class="who"><b>Claudia</b><small>Cliente</small></span></figcaption>
+        </figure>
+
+        <figure class="testimonial">
+          <svg class="ico quote" aria-hidden="true"><use href="#i-cita"/></svg>
+          <blockquote><p>Me ayudó a ordenar mi proyecto, definir prioridades y pasar de la idea a la acción.</p></blockquote>
+          <figcaption><span class="avatar" aria-hidden="true"></span><span class="who"><b>Carlos</b><small>Emprendedor</small></span></figcaption>
+        </figure>
+
+        <figure class="testimonial">
+          <svg class="ico quote" aria-hidden="true"><use href="#i-cita"/></svg>
+          <blockquote><p>Las sesiones me dieron claridad y foco para tomar decisiones desde lo que realmente me importaba.</p></blockquote>
+          <figcaption><span class="avatar" aria-hidden="true"></span><span class="who"><b>Romina</b><small>Profesional</small></span></figcaption>
+        </figure>
+      </div>
+
+      <div class="track-dots" role="tablist" aria-label="Testimonios" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section id="contacto" class="final-cta">
+    <div class="container cta-inner">
+      <div>
+        <p class="eyebrow">PRÓXIMO PASO</p>
+        <h2>¿Querés empezar a trabajar en eso que hoy te está ocupando?</h2>
+        <p>Podemos conversar sobre tu situación y evaluar si un proceso de coaching es adecuado para vos.</p>
+      </div>
+      <a class="btn btn-primary btn-lg btn-icon" href="https://wa.me/5491153842626?text=Hola%20Florencia%2C%20me%20gustar%C3%ADa%20agendar%20una%20sesi%C3%B3n%20de%20coaching."
+         target="_blank" rel="noopener" data-cta="cta-final">
+        <svg class="ico solid" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        Agendar una sesión
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section id="recursos" class="newsletter">
+    <div class="container news-inner">
+      <span class="icon-circle lg"><svg class="ico" aria-hidden="true"><use href="#i-sobre"/></svg></span>
+      <div class="news-copy">
+        <h2>Recibí recursos y reflexiones para tu desarrollo profesional y personal.</h2>
+        <p>Herramientas, artículos y ejercicios prácticos en tu correo.</p>
+      </div>
+      <!-- El submit lo maneja script.js: manda el email a un Apps Script que lo
+           agrega a contactos.txt en Drive. Ver apps-script/README.md. -->
+      <form class="news-form" novalidate>
+        <label class="sr-only" for="news-email">Tu correo electrónico</label>
+        <input id="news-email" name="email" type="email" autocomplete="email"
+               placeholder="Tu correo electrónico" required>
+        <button class="btn btn-primary" type="submit">Quiero suscribirme</button>
+        <p class="form-nota">Usamos tu correo sólo para enviarte estos recursos. Podés darte de baja cuando quieras.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand inverse" href="#inicio">
+        <span>FLORENCIA</span><strong>CERNUSCHI</strong><small>COACH ONTOLÓGICA PROFESIONAL</small>
+      </a>
+      <p>Acompaño a personas, profesionales y emprendedores a trabajar objetivos, decisiones, cambios y desarrollo.</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/cernuschiflorencia/" target="_blank" rel="noopener me" aria-label="LinkedIn de Florencia Cernuschi">
+          <svg class="ico solid" aria-hidden="true"><use href="#i-linkedin"/></svg>
+        </a>
+        <a href="https://wa.me/5491153842626" target="_blank" rel="noopener"
+           aria-label="Escribir por WhatsApp">
+          <svg class="ico solid" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        </a>
+        <!-- Sumar aquí Instagram, YouTube u otras redes SOLO cuando sean perfiles
+             oficiales verificados, y replicarlas en el "sameAs" del JSON-LD
+             (Documento Maestro §18 y §19). -->
+      </div>
+    </div>
+
+    <nav aria-label="Navegación del sitio">
+      <h2>Navegación</h2>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#formacion">Formación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <nav aria-label="Especialidades">
+      <h2>Especialidades</h2>
+      <a href="#especialidades">Coaching Ejecutivo</a>
+      <a href="#especialidades">Coaching para Emprendedores</a>
+      <a href="#especialidades">Coaching Vocacional</a>
+      <a href="#especialidades">Coaching en Finanzas Personales</a>
+      <a href="#especialidades">Liderazgo</a>
+    </nav>
+
+    <div>
+      <h2>Contacto</h2>
+      <p class="contact-line">
+        <svg class="ico solid" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        <a href="https://wa.me/5491153842626" target="_blank" rel="noopener" data-cta="footer-numero">+54 9 11 5384-2626</a>
+      </p>
+      <p class="contact-line"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg> Sesiones online</p>
+      <a class="btn btn-light" href="https://wa.me/5491153842626?text=Hola%20Florencia%2C%20me%20gustar%C3%ADa%20agendar%20una%20sesi%C3%B3n%20de%20coaching."
+         target="_blank" rel="noopener" data-cta="footer">Agendar una sesión</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <div class="creditos">
+      <span>© <span id="anio">2026</span> Florencia Cernuschi · Coach Ontológica Profesional · Formación bajo estándares internacionales ICF</span>
+      <span>Copyright © 2023 <a class="credito-autoria" href="https://www.linkedin.com/in/giseares/" target="_blank" rel="noopener">giseAres</a> All rights reserved</span>
+    </div>
+    <span class="legal">
+      <a href="politica-de-privacidad.html">Política de privacidad</a>
+      <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+    </span>
+  </div>
+</footer>
+
+<!-- Confirmación de suscripción. Es un <dialog> nativo: trae el foco atrapado,
+     el cierre con Escape y el fondo oscurecido sin que haya que programarlos. -->
+<dialog id="dialogo-gracias" class="dialogo" aria-labelledby="titulo-gracias">
+  <span class="icon-circle lg" aria-hidden="true"><svg class="ico"><use href="#i-sobre"/></svg></span>
+  <h2 id="titulo-gracias">¡Gracias por suscribirte!</h2>
+  <p>Vas a empezar a recibir recursos y reflexiones para tu desarrollo profesional y personal.</p>
+  <button class="btn btn-primary" type="button" autofocus data-cerrar-dialogo>Cerrar</button>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

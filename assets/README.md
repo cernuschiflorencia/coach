@@ -44,7 +44,8 @@ o agregarlos a `.gitignore`, para no versionar 14MB que nadie descarga.
 
 ### Retrato de "Sobre mí"
 
-Viene de `images/flor.png` del sitio anterior. Ese archivo era RGBA pero con el
+Viene de `images/flor.png` del sitio anterior, que ya no está en la raíz: quedó
+guardado en el tag `sitio-v1` (`git checkout sitio-v1 -- images/flor.png`). Ese archivo era RGBA pero con el
 alpha en 255 en todos los píxeles: el fondo era blanco sólido. Se le hizo el
 recorte a transparencia con un flood fill desde los bordes, más una pasada para
 los huecos encerrados, y se recortó al bounding box del contenido. Quedó en
