@@ -374,6 +374,11 @@ a{color:inherit;text-decoration:none}
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   color:#a9bab6;font-size:.72rem;
 }
+.footer-bottom .creditos{display:flex;flex-direction:column;gap:5px}
+/* El global ya saca el subrayado; se repite acá para que quede explícito que
+   este link va sin línea, también en hover. */
+.credito-autoria{text-decoration:none;border-bottom:0}
+.credito-autoria:hover{text-decoration:none;color:#fff}
 .footer-bottom .legal{display:flex;gap:18px}
 .footer-bottom a{color:#a9bab6}
 .footer-bottom a:hover{color:#fff}
