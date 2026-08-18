@@ -446,8 +446,15 @@ a{color:inherit;text-decoration:none}
 
 @media (max-width:520px){
   .section,.section-soft{padding:68px 0}
+  /* Apilados, los dos CTA del hero tienen que verse iguales: si no, el que
+     lleva ícono queda más ancho. */
+  .hero-actions .btn{width:100%}
   .diff-grid{grid-template-columns:1fr}
   .diff-grid article,.diff-grid article:first-child{padding:20px 0;border-top:1px solid var(--line)}
+  /* En una sola columna cada item lleva su línea arriba, menos el primero. Hay
+     que repetir el nth-child del breakpoint de 2 columnas porque tiene más
+     especificidad y si no le deja al segundo item el border-top en 0. */
+  .diff-grid article:nth-child(-n+2){border-top:1px solid var(--line)}
   .diff-grid article:first-child{border-top:0}
   .problem-grid{grid-template-columns:1fr}
   .cards.five{grid-template-columns:1fr}
