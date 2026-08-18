@@ -79,7 +79,13 @@ formación, testimonios, CTA final, newsletter y footer.
    documento validado profesionalmente, y si llegan visitas desde Europa entra
    además el GDPR.
 9. **Open Graph** — falta `og-cover.jpg` de 1200x630; el meta está comentado.
-10. **Sitemap, robots y Search Console** — cuando exista la estructura de URLs.
+10. **Search Console** — falta conectar el sitio y registrar el sitemap, que ya
+    está en `sitemap.xml` con las tres URLs actuales. Al sumar las páginas
+    internas hay que agregarlas ahí.
+    **No sirve poner un `robots.txt`** en este repositorio: los rastreadores sólo
+    lo leen en la raíz del dominio (`cernuschiflorencia.github.io/robots.txt`), y
+    acá sólo controlamos `/coach/`. Por eso el sitemap se registra a mano en
+    Search Console.
 
 ## Decisiones que conviene revisar
 
