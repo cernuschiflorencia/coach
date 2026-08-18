@@ -62,13 +62,12 @@ formación, testimonios, CTA final, newsletter y footer.
    en `apps-script/README.md`.
 7. **Páginas internas** — las 12 URLs del Documento Maestro. Las cards de
    especialidades ya tienen comentado el `href` definitivo de cada una.
-8. **Datos legales de las dos páginas nuevas** — `politica-de-privacidad.html` y
-   `terminos-y-condiciones.html` ya existen y están enlazadas desde el footer,
-   pero tienen cuatro huecos marcados en amarillo con `[COMPLETAR: ...]`: nombre
-   legal y CUIT/DNI, domicilio, email de contacto y jurisdicción. Se ven bien
-   visibles a propósito, para que no pasen desapercibidos si la página se publica
-   sin llenarlos. Conviene además que un abogado revise ambos textos: son una
-   base razonable, no un documento validado profesionalmente.
+8. ~~Páginas legales~~ — **hecho**. `politica-de-privacidad.html` y
+   `terminos-y-condiciones.html` están escritas, enlazadas desde el footer y con
+   los datos de la responsable cargados. Queda una sola cosa: **que un abogado
+   revise ambos textos**. Son una base razonable que cubre la Ley 25.326, no un
+   documento validado profesionalmente, y si llegan visitas desde Europa entra
+   además el GDPR.
 9. **Open Graph** — falta `og-cover.jpg` de 1200x630; el meta está comentado.
 10. **Sitemap, robots y Search Console** — cuando exista la estructura de URLs.
 
@@ -86,9 +85,11 @@ formación, testimonios, CTA final, newsletter y footer.
   especialidades. Si se quiere el otro bloque también, se agrega.
 - **"Recursos" en el menú** apunta a la banda de newsletter, porque todavía no
   existe la página de recursos ni el blog.
-- **No hay email de contacto.** Toda la conversión pasa por WhatsApp. Si además
-  se quiere una dirección de correo, hay que sumarla al footer y al `contactPoint`
-  del JSON-LD.
+- **El email aparece sólo en las páginas legales.** `cernuschiflorencia@gmail.com`
+  figura como canal para ejercer derechos sobre los datos, que es lo que exige la
+  normativa. En la home toda la conversión sigue pasando por WhatsApp, que fue la
+  decisión tomada. Si se quiere el correo también ahí, hay que sumarlo al footer y
+  al `contactPoint` del JSON-LD.
 - **Redes en el footer:** sólo LinkedIn y correo. El Documento Maestro §18 y §19
   pide enlazar únicamente perfiles oficiales verificados, así que no se sumaron
   Instagram ni YouTube aunque aparezcan en el mockup.
